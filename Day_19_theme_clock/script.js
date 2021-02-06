@@ -28,7 +28,7 @@ const months = [
 function setTime() {
   const time = new Date();
   const month = time.getMonth();
-  const day = time.getDay();
+  let day = time.getDay();
   const date = time.getDate();
   const year = time.getFullYear();
   const hours = time.getHours();
@@ -70,7 +70,11 @@ function setTime() {
   timeEl.innerHTML = `${hoursForClock}:${
     minutes < 10 ? `0${minutes}` : minutes
   }:${seconds < 10 ? `0${seconds}` : seconds} ${amPm}`;
-
+  if ((day = days.length)) {
+    day = days.length - 1;
+  } else {
+    day = time.getDay;
+  }
   dateEl.innerHTML = `${days[day]}, ${months[month]} <span>${date}</span>, ${year}`;
 }
 
@@ -80,7 +84,17 @@ setInterval(setTime, 1);
 function checkTime() {
   const time = new Date();
   const hours = time.getHours();
-  const evening = hours >= 18 ? 'yes' : 'no';
+  let evening = 'yes';
+
+  console.log(hours);
+
+  if (hours <= 7) {
+    evening = 'yes';
+  } else if (hours >= 18) {
+    evening = 'yes';
+  } else {
+    evening = 'no';
+  }
 
   if (evening === 'yes') {
     html.classList.add('dark');
