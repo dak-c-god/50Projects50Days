@@ -20,7 +20,7 @@ buttons.forEach((button) => {
     circle.style.top = `${yInside}px`;
     circle.style.left = `${xInside}px`;
     this.appendChild(circle);
-    console.log(button.classList);
+    setTimeout(() => circle.remove(), 1000);
   });
   button.addEventListener('keyup', function (e) {
     circle.style.top = '50%';

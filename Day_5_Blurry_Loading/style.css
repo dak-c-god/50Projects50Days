@@ -14,7 +14,7 @@ body {
 }
 
 .bg {
-  background: url(/wolfgang-hasselmann-2zWmrsKerDw-unsplash.jpg) no-repeat
+  background: url(./wolfgang-hasselmann-2zWmrsKerDw-unsplash.jpg) no-repeat
     center center/cover;
   position: absolute;
   top: -30px;
