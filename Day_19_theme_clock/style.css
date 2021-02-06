@@ -71,11 +71,14 @@ body {
   height: 15px;
   position: absolute;
   background-color: #000;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top: 4px solid #ff6347;
 }
 
 .indicator.top {
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(180deg);
 }
 
 .indicator.bottom {
@@ -86,13 +89,13 @@ body {
 }
 
 .indicator.right {
-  right: 14px;
+  right: -1px;
   bottom: 50%;
   transform-origin: bottom center;
-  transform: rotate(90deg);
+  transform: rotate(270deg);
 }
 .indicator.left {
-  left: 0%;
+  left: -1px;
   bottom: 50%;
   transform-origin: bottom center;
   transform: rotate(90deg);
