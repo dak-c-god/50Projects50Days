@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  /* background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%); */
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.btn.ripple {
+  font-family: 'Comfortaa', sans-serif;
+  padding: 1rem 3rem;
+  font-size: 20px;
+  position: relative;
+  border-radius: 50px;
+
+  border: 2px solid #aaa;
+  background-color: #cd00cd;
+  text-transform: lowercase;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(51, 51, 51, 0.4), 3px 0px 6px rgba(51, 51, 51, 0.4);
+}
+
+.btn.ripple.small {
+  padding: 0.5rem 1rem;
+}
+
+.circle {
+  position: absolute;
+  background-color: #cd00cd;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 1s linear;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    background-color: #fff;
+    opacity: 0;
+  }
+}
