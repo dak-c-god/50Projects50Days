@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://kit.fontawesome.com/0be3919bfe.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/0be3919bfe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>My Project BoilerPlate</title>
+    <title>Theme Clock</title>
 </head>
 <body>
-    <h1>Project Starter</h1>
+    <!-- Inspo from https://dribbble.com/shots/5958443-Alarm-clock -->
+
+   
+    
+    <div class="clock-container" role="clock widget">
+        <div class="clock">
+            <div class="indicator top"></div>
+            <div class="indicator bottom"></div>
+            <div class="indicator right"></div>
+            <div class="indicator left"></div>
+            <div class="needle hour"></div>
+            <div class="needle minute"></div>
+            <div class="needle second"></div>
+            <div class="needle millisecond"></div>
+            <div class="center-point"><div class="inner-circle"></div></div>
+        </div>
+        <div class="time" tabindex="0" aria-role="current time" ></div>
+        <div class="date" tabindex="0" role="curent date"></div>
+    </div>
+    <footer>
+        <button class="toggle" role="toggle light and dark"><i class="fas fa-moon"></i>Dark Mode</button>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
