@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ecf0f1;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.card {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 66%;
+  max-width: 600px;
+  min-width: 400px;
+  min-height: 600px;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.card-header {
+  height: 100%;
+
+  background-color: #333333;
+}
+
+.card-header img {
+  object-fit: cover;
+  object-position: center center;
+  height: 100%;
+  max-height: 350px;
+  width: 100%;
+}
+
+.card-content {
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50%;
+}
+
+.truncate {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-title {
+  margin: 0;
+  font-size: 22px;
+}
+
+.card-excerpt {
+  color: #777777;
+  margin: 10px 0 10px;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.profile-img {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 75px;
+  width: 75px;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 20px;
+  width: 100px;
+  color: #555;
+}
+
+.author-info small {
+  color: #777777;
+  margin-top: 10px;
+}
+
+.btn {
+  position: absolute;
+  right: 10px;
+  padding: 1rem 2rem;
+  border: 0;
+  background-color: #444444;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), 2px 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  border: 2px outset #ecf0f1;
+}
+
+.btn:active {
+  opacity: 0.5;
+}
+
+.btn:focus {
+  outline: 0;
+  border: 2px inset #ecf0f1;
+  box-shadow: none;
+}
+
+.animated-bg {
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 10%,
+    #f6f7f8 20%,
+    #f6f7f8 100%
+  );
+  background-size: 200% 100%;
+  animation: bgPosi 1s linear infinite;
+}
+
+.animated-bg-text {
+  border-radius: 50px;
+  display: inline-block;
+  margin: 0;
+  height: 10px;
+
+  width: 100%;
+}
+
+@keyframes bgPosi {
+  0% {
+    background-position: 50% 0;
+  }
+
+  100% {
+    background-position: -150% 0;
+  }
+}
