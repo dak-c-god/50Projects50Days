@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-brand-color: #0071b3;
+  --secondary-brand-color: #999999;
+  --overlay-color: #ecf0f1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  height: 90vh;
+}
+
+main {
+  height: 100%;
+}
+
+header a {
+  color: #eeee;
+  text-decoration: none;
+}
+
+header {
+  background-color: #a0daa9;
+  font-family: 'Jura';
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 3.275);
+  height: 10rem;
+}
+
+header.active {
+  background-color: #a0daa9;
+  height: 2rem;
+  opacity: 0.9;
+}
+
+header header .logo {
+  margin-left: 8.25%;
+  /* width: 33%; */
+}
+
+header div.logo a {
+  font-size: 2rem;
+  color: var(--primary-brand-color);
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+header.active div.logo a {
+  color: #333;
+}
+
+nav {
+  width: 33%;
+  margin-right: 4.25%;
+  max-width: 33%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav ul a {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 800;
+}
+
+.current,
+.current:hover,
+.current:focus {
+  color: var(--primary-brand-color);
+}
+
+nav ul a:hover,
+nav ul a:focus {
+  color: var(--secondary-brand-color);
+  outline: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#hero {
+  background: url('./david-pisnoy-46juD4zY1XA-unsplash.jpg') no-repeat center
+    top/cover;
+  height: 100vh;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+}
+/* #hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+  opacity: 0.5;
+  z-index: -1;
+} */
+
+.title {
+  font-size: 5rem;
+  text-transform: capitalize;
+  padding: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ecf0f1;
+  background-color: rgba(51, 51, 51, 0.2);
+  border-radius: 50px;
+  box-shadow: 0 3px 6px rgba(51, 51, 51, 0.7), 0 6px 10px rgba(51, 51, 51, 0.7);
+}
+
+.content {
+  padding: 5rem;
+}
+.sub {
+  font-size: 3rem;
+  padding: 0;
+  margin: 30px 10px;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content p {
+  color: #555555;
+  line-height: 30px;
+  letter-spacing: 1.2px;
+  font-size: 25px;
+}
