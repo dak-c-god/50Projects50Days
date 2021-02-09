@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0be3919bfe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Custom Password Generator</title>
+</head>
+<body>
+    <section class="container">
+        <h1>Password Genie <i class="fas fa-key scale"></i></h1>
+        <div class="result-container">
+            <span id="result"></span>
+            <button class="btn" id="clipboard"><i class="far fa-clipboard"></i></button>
+        </div>
+        <div class="settings">
+            <div class="setting">
+                <label for="length">Password Length</label>
+                <input type="number" name="length" id="length" min="8" max="32" value="32"> 
+            </div>
+            <div class="setting">
+                <label for="lowercase">Include lowercase</label>
+                <input type="checkbox" name="lowercase" id="lowercase" checked>
+            </div>
+            <div class="setting">
+                <label for="uppercase">Include uppercase</label>
+                <input type="checkbox" name="uppercase" id="uppercase" checked>
+            </div>
+            <div class="setting">
+                <label for="number">Include Numbers</label>
+                <input type="checkbox" name="number" id="number" checked>
+            </div>
+            <div class="setting">
+                <label for="symbols">Include Symbols</label>
+                <input type="checkbox" name="symbols" id="symbol" checked>
+            </div>
+        </div>
+        <button id="generate"class="btn btn-large">Generate</button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

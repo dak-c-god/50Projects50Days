@@ -68,7 +68,7 @@ body {
 
 .love-me .fa-heart {
   position: absolute;
-  animation: grow 0.3s linear;
+  animation: grow 1s linear;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0);
@@ -84,18 +84,18 @@ body {
 
 @keyframes grow {
   0% {
-    transform: scale(1.2);
+    transform: scale(50);
   }
 
   25% {
-    transform: scale(2);
+    transform: scale(10);
   }
   50% {
-    transform: scale(6);
+    transform: scale(2);
     opacity: 0.7;
   }
   100% {
-    transform: scale(8);
+    transform: scale(0);
     opacity: 0;
   }
 }

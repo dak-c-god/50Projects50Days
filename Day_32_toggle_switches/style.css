@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #eeeeee;
+  box-shadow: inset 0 100px 400px rgba(190, 190, 190, 0.9);
+  text-align: center;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 200px;
+}
+.toggle-container span {
+  font-size: 22px;
+  color: #444444;
+  font-weight: 600;
+}
+
+h1 {
+  color: #444444;
+}
+.toggle {
+  display: none;
+}
+
+.label {
+  min-width: 100px;
+  height: 40px;
+  background-color: rgba(212, 211, 211, 0.933);
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 15px 0;
+  position: relative;
+  transition: background-color 0.4s ease-in-out;
+  border: 2px #aaaaaa groove;
+  box-shadow: 0px 8px 10px inset rgba(20, 20, 20, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.toggle:checked + .label {
+  background-color: #a0cc0a;
+}
+
+.ball {
+  background: #efefef;
+  height: 36px;
+  border: solid #bbbbbb 1px;
+  width: 36px;
+  border-radius: 50%;
+  position: absolute;
+
+  animation: slideOff 0.2s linear forwards;
+}
+
+.toggle:checked + .label .ball {
+  animation: slideOn 0.2s linear forwards;
+}
+
+@keyframes slideOn {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+
+  50% {
+    transform: translateX(40px) scale(0.7);
+  }
+
+  100% {
+    transform: translateX(60px) scale(1);
+  }
+}
+
+@keyframes slideOff {
+  0% {
+    transform: translateX(40px) scale(1);
+  }
+
+  50% {
+    transform: translateX(20px) scale(0.7);
+  }
+
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}

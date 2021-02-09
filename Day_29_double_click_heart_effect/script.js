@@ -31,7 +31,7 @@ const createHeart = (e) => {
 loveMe.addEventListener('click', (e) => createHeart(e));
 loveMe.addEventListener('dblclick', (e) => createHeart(e));
 
-loveMe.addEventListener('keypress', function (e) {
+loveMe.addEventListener('keyup', function (e) {
   heart.style.top = '50%';
   heart.style.left = '50%';
   if (e.code === 'Enter') {
